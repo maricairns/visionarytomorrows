@@ -93,13 +93,13 @@
             max-width: 100%;
             padding: 50px 80px 50px;
             display: flex;
-            align-items: flex-start;
-            gap: 50px;
+            align-items: center;
+            gap: 40px;
         }
 
         .course-hero-text {
             flex: 1;
-            max-width: 600px;
+            max-width: 550px;
         }
 
         .course-hero-label {
@@ -134,10 +134,12 @@
 
         .course-hero-image {
             flex-shrink: 0;
+            flex: 1;
+            text-align: right;
         }
 
         .course-hero-image img {
-            max-width: 450px;
+            max-width: 550px;
             width: 100%;
             height: auto;
         }
@@ -163,7 +165,7 @@
         /* ============ WHAT TO EXPECT ============ */
         .expect-section {
             background-color: #ffffff;
-            padding: 50px 40px 20px;
+            padding: 50px 40px 10px;
             text-align: center;
         }
 
@@ -177,16 +179,20 @@
         .expect-section .expect-subtitle {
             font-size: 18px;
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         /* ============ COURSE SECTIONS (alternating) ============ */
+        .course-sections-wrapper {
+            background-color: #ffffff;
+        }
+
         .course-section {
             max-width: 1100px;
             margin: 0 auto;
             padding: 30px 40px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 40px;
         }
 
@@ -199,7 +205,7 @@
         }
 
         .course-section-image img {
-            max-width: 350px;
+            max-width: 420px;
             width: 100%;
             height: auto;
             border-radius: 4px;
@@ -458,7 +464,7 @@
         }
 
         .bottom-pricing-image img {
-            max-width: 450px;
+            max-width: 500px;
             width: 100%;
             height: auto;
         }
@@ -575,7 +581,7 @@
             }
 
             .course-hero-image img {
-                max-width: 280px;
+                max-width: 300px;
             }
 
             .course-section {
@@ -584,7 +590,7 @@
             }
 
             .course-section-image img {
-                max-width: 250px;
+                max-width: 280px;
             }
 
             .expect-section h2,
@@ -661,6 +667,9 @@
         <p class="expect-subtitle">The online course is divided into four main interconnected sections</p>
     </section>
 
+    <!-- ============ COURSE SECTIONS (white background) ============ -->
+    <div class="course-sections-wrapper">
+
     <!-- ============ SECTION 1 ============ -->
     <div class="course-section">
         <div class="course-section-image">
@@ -716,6 +725,8 @@
             <p>Identify key societal themes, their interconnections, and the impacts on your mental health and wellbeing.</p>
         </div>
     </div>
+
+    </div><!-- end course-sections-wrapper -->
 
     <!-- ============ COURSE VIDEO CONTENT ============ -->
     <section class="video-content-section">
