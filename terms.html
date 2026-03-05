@@ -1,185 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service | Visionary Tomorrows</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="images/Banner_Logo.png" type="image/png">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 1.7; color: #000; background: #fff; }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; height: auto; display: block; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Visionary Tomorrows</title>
+    <link rel="icon" type="image/png" href="images/Banner_Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ============ RESET ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .site-header { background: #fff; padding: 14px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-    .site-header .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
-    .site-header .logo img { height: 48px; width: auto; }
-    .site-header nav { display: flex; align-items: center; gap: 26px; }
-    .site-header nav a { font-size: 14px; font-weight: 500; color: #333; transition: color 0.2s; }
-    .site-header nav a:hover { color: #2aad69; }
-    .btn-login { background: #2aad69; color: #fff !important; padding: 8px 22px; border-radius: 6px; font-weight: 600; font-size: 14px; transition: background 0.3s; }
-    .btn-login:hover { background: #239b5b; }
-    .nav-toggle { display: none; background: none; border: none; font-size: 26px; cursor: pointer; color: #333; }
+        /* ============ BASE ============ */
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .legal-content { max-width: 780px; margin: 0 auto; padding: 40px 24px 60px; }
-    .legal-content h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
-    .legal-content .meta { font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.6; }
-    .legal-content h2 { font-size: 17px; font-weight: 700; margin-top: 28px; margin-bottom: 10px; }
-    .legal-content p { font-size: 14px; color: #333; margin-bottom: 14px; line-height: 1.7; }
-    .legal-content ul { margin: 0 0 14px 24px; }
-    .legal-content ul li { font-size: 14px; color: #333; margin-bottom: 6px; list-style: disc; line-height: 1.6; }
-    .legal-content a { color: #2aad69; }
-    .legal-content a:hover { text-decoration: underline; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            line-height: 1.8;
+            color: #000000;
+            background-color: #f7f7f7;
+        }
 
-    .site-footer { text-align: center; padding: 40px 24px 24px; border-top: 1px solid #eee; }
-    .site-footer .footer-logo { height: 90px; margin: 0 auto 14px; }
-    .site-footer .copyright { font-size: 13px; color: #666; margin-bottom: 4px; }
-    .site-footer .made-with { font-size: 13px; margin-bottom: 10px; }
-    .site-footer .vision-mission { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
-    .site-footer .footer-nav { display: flex; justify-content: center; gap: 14px; margin: 14px 0 8px; font-size: 13px; }
-    .site-footer .footer-nav a:hover { color: #2aad69; }
-    .site-footer .footer-social { display: flex; justify-content: center; gap: 14px; margin: 8px 0; }
-    .site-footer .footer-social a { font-size: 18px; color: #333; transition: color 0.2s; }
-    .site-footer .footer-social a:hover { color: #2aad69; }
-    .site-footer .legal-links { margin-top: 10px; font-size: 12px; color: #888; }
-    .site-footer .legal-links a { color: #2aad69; margin: 0 6px; }
+        a {
+            color: #2aad69;
+            text-decoration: none;
+        }
 
-    @media (max-width: 768px) {
-      .site-header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px; border-bottom: 1px solid #eee; gap: 14px; }
-      .site-header nav.active { display: flex; }
-      .nav-toggle { display: block; }
-      .legal-content h1 { font-size: 22px; }
-    }
-  </style>
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ============ HEADER ============ */
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .header-logo img {
+            height: 65px;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .header-nav a {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: #2aad69;
+        }
+
+        .btn-login {
+            background-color: #2aad69;
+            color: #ffffff !important;
+            padding: 13px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #239b5b;
+            text-decoration: none !important;
+        }
+
+        /* ============ MAIN CONTENT ============ */
+        .terms-content {
+            background-color: #f7f7f7;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 80px 60px;
+        }
+
+        .terms-content h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .terms-content .last-updated {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+
+        .terms-content .intro-line {
+            font-size: 22px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .terms-content p {
+            font-size: 22px;
+            margin-bottom: 22px;
+            line-height: 1.8;
+            color: #000000;
+        }
+
+        .terms-content h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 18px;
+            color: #000000;
+        }
+
+        .terms-content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 14px;
+            color: #000000;
+        }
+
+        .terms-content ul {
+            margin-bottom: 22px;
+            padding-left: 25px;
+        }
+
+        .terms-content ul li {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .terms-content a {
+            color: #2aad69;
+            word-break: break-word;
+        }
+
+        /* ============ COFFEE CUPS SECTION ============ */
+        .coffee-section {
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 0 20px 0;
+        }
+
+        .coffee-section img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ============ FOOTER ============ */
+        .site-footer {
+            background-color: #c0c0c0;
+            background-image: url('images/Background_light.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 50px 30px 45px;
+            width: 100%;
+        }
+
+        .footer-copyright {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+
+        .footer-made-with {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 18px;
+        }
+
+        .footer-vision,
+        .footer-mission {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 6px;
+        }
+
+        .footer-mission {
+            margin-bottom: 25px;
+        }
+
+        .footer-nav {
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: #333333;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        .footer-nav a:hover {
+            color: #2aad69;
+        }
+
+        .footer-social {
+            margin-bottom: 22px;
+        }
+
+        .footer-social a {
+            color: #000000;
+            font-size: 30px;
+            margin: 0 16px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: #2aad69;
+        }
+
+        .footer-legal a {
+            color: #666666;
+            font-size: 18px;
+            margin: 0 14px;
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: #2aad69;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 12px 20px;
+            }
+
+            .header-logo img {
+                height: 50px;
+            }
+
+            .header-nav {
+                gap: 18px;
+            }
+
+            .header-nav a {
+                font-size: 15px;
+            }
+
+            .btn-login {
+                padding: 9px 20px;
+                font-size: 15px;
+            }
+
+            .terms-content {
+                padding: 30px 25px 40px;
+            }
+
+            .terms-content h1 {
+                font-size: 32px;
+            }
+
+            .terms-content h2 {
+                font-size: 22px;
+            }
+
+            .terms-content p,
+            .terms-content ul li,
+            .terms-content .intro-line {
+                font-size: 18px;
+            }
+
+            .coffee-section img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-nav a:not(.btn-login) {
+                display: none;
+            }
+
+            .terms-content {
+                padding: 25px 16px 35px;
+            }
+
+            .terms-content h1 {
+                font-size: 28px;
+            }
+
+            .terms-content p,
+            .terms-content ul li {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo"><img src="images/Banner_Logo.png" alt="Visionary Tomorrows"></a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav>
-        <a href="companies.html">Companies</a>
-        <a href="course-content.html">Course Content</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="#" class="btn-login">Login</a>
-      </nav>
-    </div>
-  </header>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/Banner_Logo.png" alt="Visionary Tomorrows — Inspire | Mental Health | Awareness">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="#" class="btn-login">Login</a>
+        </nav>
+    </header>
 
-  <div class="legal-content">
-    <h1>Terms of Service</h1>
-    <p class="meta">Last Updated: 1 January 2026</p>
-    <p class="meta">By using this website</p>
+    <!-- ============ TERMS OF SERVICE CONTENT ============ -->
+    <main class="terms-content">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last Updated: 1 January 2026</p>
+        <p class="intro-line">By using this website</p>
 
-    <p>"Website", you are deemed to have read and agreed to the following terms and conditions. The following terminology applies to these Terms and Conditions "Terms", Privacy Policy, any disclaimer notice, and any or all Agreements on this Website: "Customer," "You," "User," and "Your" refers to you, the person accessing this Website and using our "Product" "Services" "Online Course" and therefore accepting the Company's terms and conditions. "User Account" or "Account" refers to the online account maintained by the User at the Website to avail of the "Product" "Services". "Company," "Our," "We," and "Us" refer to Visionary Tomorrows©. "Party" or "Parties" refers to both the "Customer" "User" and ourselves, or either the Customer or ourselves. "Product" "Services" refers to a unique product provided by our Company as a result of our commitment and services. Any use or access by anyone under the age of 16 is prohibited unless permitted by the laws of your country of residence, and certain regions and/or "Product" "Services" may have additional requirements and/or restrictions. All rights not expressly granted to you under these Terms are reserved by the Company.</p>
+        <p>"Website", you are deemed to have read and agreed to the following terms and conditions. The following terminology applies to these Terms and Conditions "Terms", Privacy Policy, any disclaimer notice, and any or all Agreements on this Website: "Customer," "You," "User," and "Your" refers to you, the person accessing this Website and using our "Product" "Services" "Online Course" and therefore accepting the Company's terms and conditions. "User Account" or "Account" refers to the online account maintained by the User at the Website to avail of the "Product" "Services". "Company," "Our," "We," and "Us" refer to Visionary Tomorrows©. "Party" or "Parties" refers to both the "Customer" "User" and ourselves, or either the Customer or ourselves. "Product" "Services" refers to a unique product provided by our Company as a result of our commitment and services. Any use or access by anyone under the age of 16 is prohibited unless permitted by the laws of your country of residence, and certain regions and/or "Product" "Services" may have additional requirements and/or restrictions. All rights not expressly granted to you under these Terms are reserved by the Company.</p>
 
-    <h2>Product / Services</h2>
-    <p>The Website allows you to purchase "Product" "Services" for a fee. We may, at our sole discretion, engage third-party service providers from time to time to provide certain "Product" "Services". Each such purchase is intended to be used only by one person unless specified otherwise under the "Product" "Services" details. You are not allowed to share your purchase and/or provide access to such purchase to a third party. Please acknowledge that the "Product" "Services" we provide to you for a fee paid through our Website constitute our intellectual property and may not be exploited in any way prohibited by these Terms.</p>
+        <h2>Product / Services</h2>
 
-    <h2>Licence</h2>
-    <p>Subject to these Terms and our policies, we grant you a limited, personal, non-exclusive, non-transferable, and revocable licence to use our "Product" "Services". You may use our "Product" "Services" only for your personal, non-commercial use, unless you obtain our written permission to otherwise use the "Product" "Services". You also agree that you will access and/or use only one User Account unless expressly permitted by us separately in writing, and you will not share access to your User Account or access information for your Account with any third party. Using our "Product" "Services" does not give you ownership of or any intellectual property rights in our "Product" "Services" you access for a fee paid through our Website.</p>
+        <p>The Website allows you to purchase "Product" "Services" for a fee. We may, at our sole discretion, engage third-party service providers from time to time to provide certain "Product" "Services". Each such purchase is intended to be used only by one person unless specified otherwise under the "Product" "Services" details. You are not allowed to share your purchase and/or provide access to such purchase to a third party. Please acknowledge that the "Product" "Services" we provide to you for a fee paid through our Website constitute our intellectual property and may not be exploited in any way prohibited by these Terms.</p>
 
-    <h2>Privacy</h2>
-    <p>We are committed to protecting your privacy. We will only use information collected from individual Customers, particularly email addresses, to facilitate and deliver orders as part of our commitment to provide the "Product" "Services" our Customers have paid for. Moreover, as we endeavour to provide you with better "Product" "Services", we will also use your emails to promote our other "Product" "Services". You can opt out anytime by pressing the unsubscribe button that can be found in every email we send. We will constantly review our systems and data to ensure the best possible service to our Customers.</p>
+        <h2>Licence</h2>
 
-    <h2>Support</h2>
-    <p>We will provide Customer support services to our registered Users via electronic mail. If you experience any difficulties using our "Product" "Services", please notify us using the following contact: mari.cairns@gmail.com. with the subject line "Support." However, we will not be liable or in any way responsible for your own technical issues, internet speed, and other matters related to your access/device/location. We reserve the right to solely determine whether such difficulty exists on our side.</p>
+        <p>Subject to these Terms and our policies, we grant you a limited, personal, non-exclusive, non-transferable, and revocable licence to use our "Product" "Services". You may use our "Product" "Services" only for your personal, non-commercial use, unless you obtain our written permission to otherwise use the "Product" "Services". You also agree that you will access and/or use only one User Account unless expressly permitted by us separately in writing, and you will not share access to your User Account or access information for your Account with any third party. Using our "Product" "Services" does not give you ownership of or any intellectual property rights in our "Product" "Services" you access for a fee paid through our Website.</p>
 
-    <h2>Disclaimer</h2>
-    <p>The information on this Website is provided on an "AS IS" basis. To the fullest extent permitted by law, this Company: (i) excludes all representations and warranties relating to this Website and its content or which may be provided by any affiliates or other third parties, including in relation to any inaccuracies or omissions in this Website and/or the Company's "Product" "Services"; (ii) excludes all liability for damages arising out of or in connection with your use of this Website. This includes, without limitation, direct loss, loss of business or profits (whether or not the loss of such profits was foreseeable, arose in the normal course of things, or you have advised this Company of the possibility of such potential loss), damage caused to your computer, computer software, systems and programs, and the data thereon, or any other direct or indirect, consequential, and incidental damages. Without limiting the foregoing, we do not warrant that (a) the "Product" "Services" will meet your requirements or expectations or achieve the intended purposes, (b) the "Product" "Services" will not experience outages or otherwise be uninterrupted, timely, secure, or error-free, (c) defects in the "Product" "Services" will be corrected. You assume all risk of personal injury, including death and damage to personal property, sustained from use of the "Product" "Services".</p>
+        <h2>Privacy</h2>
 
-    <h2>Fees</h2>
-    <p>We offer paid "Product" "Services" for a fee. You are responsible for paying all fees charged by us and applicable taxes in a timely manner with a payment mechanism associated with the applicable paid "Product" "Services". When you make a purchase, you agree not to use an invalid or unauthorised payment method. We reserve the right to disable access to any "Product" "Services" for which we have not received adequate payment. Unless otherwise stated, all fees are quoted in British Pounds (£). You are solely responsible for any sales, value-added, withholding, or similar taxes that apply to your purchase, whether domestic or foreign. You can purchase our "Product" "Services" via credit card or other payment options offered through Stripe. If you choose to pay by credit card, you authorise us to charge your credit card or bank account for the applicable fee of the "Product" "Services". By making a payment, you further authorise Stripe, as our third-party payment processor, to process your payment. By purchasing any "Product" "Services" through our Website, you hereby consent and agree to abide by Stripe's customer terms and conditions and privacy policy. You understand that we have no control over Stripe's terms and conditions or privacy policy. If you do not agree to Stripe's terms and conditions or privacy policy, do not proceed with any purchase. It is your sole responsibility to review and understand any third-party policies.</p>
+        <p>We are committed to protecting your privacy. We will only use information collected from individual Customers, particularly email addresses, to facilitate and deliver orders as part of our commitment to provide the "Product" "Services" our Customers have paid for. Moreover, as we endeavour to provide you with better "Product" "Services", we will also use your emails to promote our other "Product" "Services". You can opt out anytime by pressing the unsubscribe button that can be found in every email we send. We will constantly review our systems and data to ensure the best possible service to our Customers.</p>
 
-    <h2>Refunds</h2>
-    <p>We recommend contacting us with any questions prior to purchase, as we do not offer refunds for the instant access online course. The course was thoughtfully created, combining many years of skill and experience with many hours of time and effort. You gain instant benefit as the entire course is available immediately upon purchase.</p>
+        <h2>Support</h2>
 
-    <h2>Customer Restrictions</h2>
-    <p>As a Customer, you agree not to:</p>
-    <p>Circumvent, disable, or otherwise interfere with security-related features of the Website;</p>
-    <p>Disparage, tarnish, or otherwise harm, in our opinion, the "Website" and/or the "Product" "Services".</p>
-    <p>Use the "Product" "Services" in a manner inconsistent with any applicable laws or regulations;</p>
-    <p>Interfere with, disrupt, or create an undue burden on the "Product" "Services" or the networks or services connected to the "Product" "Services".</p>
-    <p>Share access to our "Product" "Services" with a third party (unless otherwise permitted by us separately in writing);</p>
-    <p>Lease, sell, grant, or otherwise exploit our "Product" "Services" in a way prohibited by these Terms.</p>
-    <p>Attempt to bypass any measures of the Website designed to prevent or restrict access to the "Product" "Services", or any portion of the Website.</p>
+        <p>We will provide Customer support services to our registered Users via electronic mail. If you experience any difficulties using our "Product" "Services", please notify us using the following contact: <a href="mailto:mari.cairns@gmail.com">mari.cairns@gmail.com</a>. with the subject line "Support." However, we will not be liable or in any way responsible for your own technical issues, internet speed, and other matters related to your access/device/location. We reserve the right to solely determine whether such difficulty exists on our side.</p>
 
-    <h2>User Content and Conduct</h2>
-    <p>In case our "Product" "Services" enables you to share your content ("User Content"), you retain all intellectual property rights in, and are responsible for, the User Content you create and share. However, by submitting User Content, you grant other Users and the Company the right to share your User Content via any social media platform. As a User of the Website, you agree not to post any Prohibited Content:</p>
-    <p>Profane language or content;</p>
-    <p>Content that promotes, fosters, or perpetuates discrimination on the basis of race, religion, gender, marital status, familial status, national origin, age, mental or physical disability, sexual orientation, gender identity, source of income, or other protected status under applicable law;</p>
-    <p>Inappropriate sexual content or links to inappropriate sexual content, nudity, or obscene material;</p>
-    <p>Conduct or encouragement of illegal activity;</p>
-    <p>Private and confidential information;</p>
-    <p>Content that violates the legal ownership interests of any other party.</p>
+        <h2>Disclaimer</h2>
 
-    <h2>Intellectual Property of Our Company</h2>
-    <p>Unless otherwise indicated, this Website is our proprietary property and all source code, databases, functionality, software, Website designs, audio, video, text, photographs, and graphics on the Website (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us. These are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws in the United Kingdom, international copyright laws, and international conventions.</p>
+        <p>The information on this Website is provided on an "AS IS" basis. To the fullest extent permitted by law, this Company: (i) excludes all representations and warranties relating to this Website and its content or which may be provided by any affiliates or other third parties, including in relation to any inaccuracies or omissions in this Website and/or the Company's "Product" "Services"; (ii) excludes all liability for damages arising out of or in connection with your use of this Website. This includes, without limitation, direct loss, loss of business or profits (whether or not the loss of such profits was foreseeable, arose in the normal course of things, or you have advised this Company of the possibility of such potential loss), damage caused to your computer, computer software, systems and programs, and the data thereon, or any other direct or indirect, consequential, and incidental damages. Without limiting the foregoing, we do not warrant that (a) the "Product" "Services" will meet your requirements or expectations or achieve the intended purposes, (b) the "Product" "Services" will not experience outages or otherwise be uninterrupted, timely, secure, or error-free, (c) defects in the "Product" "Services" will be corrected. You assume all risk of personal injury, including death and damage to personal property, sustained from use of the "Product" "Services".</p>
 
-    <h2>Term and Termination</h2>
-    <p>The Company may terminate your access to all or any part of the "Website", "Product" "Services" at any time, with or without cause, and with or without notice, effective immediately. You can stop using our "Product" "Services" at any time. You may delete your User Account by using the Website features or notifying us at mari.cairns@gmail.com.</p>
+        <h2>Fees</h2>
 
-    <h2>Indemnification</h2>
-    <p>You agree to indemnify, defend, and hold harmless the Company, its affiliates, officers, directors, employees, agents, and licensors from and against any and all losses, expenses (including reasonable attorneys' fees), claims, and demands, due to, arising out of, or in connection with your User Content, your use of the "Product" "Services", your violation of these Terms, or your violation of any rights of a third party.</p>
+        <p>We offer paid "Product" "Services" for a fee. You are responsible for paying all fees charged by us and applicable taxes in a timely manner with a payment mechanism associated with the applicable paid "Product" "Services". When you make a purchase, you agree not to use an invalid or unauthorised payment method. We reserve the right to disable access to any "Product" "Services" for which we have not received adequate payment. Unless otherwise stated, all fees are quoted in British Pounds (£). You are solely responsible for any sales, value-added, withholding, or similar taxes that apply to your purchase, whether domestic or foreign. You can purchase our "Product" "Services" via credit card or other payment options offered through Stripe. If you choose to pay by credit card, you authorise us to charge your credit card or bank account for the applicable fee of the "Product" "Services". By making a payment, you further authorise Stripe, as our third-party payment processor, to process your payment. By purchasing any "Product" "Services" through our Website, you hereby consent and agree to abide by Stripe's customer terms and conditions and privacy policy. You understand that we have no control over Stripe's terms and conditions or privacy policy. If you do not agree to Stripe's terms and conditions or privacy policy, do not proceed with any purchase. It is your sole responsibility to review and understand any third-party policies.</p>
 
-    <h2>Changes to Terms</h2>
-    <p>We reserve the right to revise these Terms at any time. We may post an updated version of these Terms on the Website, and we will notify you of the change with a notice when you visit the Website again. You are responsible for reviewing these Terms regularly. If you do not agree to any changes, your sole remedy is to discontinue using the Website and the "Product" "Services".</p>
+        <h2>Refunds</h2>
 
-    <h2>Severability</h2>
-    <p>If any provision of these Terms is found to be unenforceable, the remainder of these Terms will remain in full force and effect. If we do not immediately enforce a provision of these Terms, it does not mean that we waive any rights under these Terms or as granted by law.</p>
+        <p>We recommend contacting us with any questions prior to purchase, as we do not offer refunds for the instant access online course. The course was thoughtfully created, combining many years of skill and experience with many hours of time and effort. You gain instant benefit as the entire course is available immediately upon purchase.</p>
 
-    <h2>Applicable Law and Jurisdiction</h2>
-    <p>These Terms and conditions are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        <h2>Customer Restrictions</h2>
 
-    <h2>Entire Agreement</h2>
-    <p>These Terms constitute the entire agreement between you and us regarding the use of this Website and supersede any prior or contemporaneous agreements, representations, or warranties, whether written or oral, relating to the "Product" "Services" or "Website".</p>
+        <p>As a Customer, you agree not to:</p>
 
-    <h2>Data Security and Confidentiality</h2>
-    <p>We prioritise the confidentiality and security of your personal information. We do not share your personal information with third parties beyond the specific purposes outlined in this policy. We will not request additional information from you outside of what you provide through the contact form unless necessary for the delivery of "Product" "Services" or as otherwise requested by you. Additionally, we do not use your data for any purposes involving training, profiling, or automated analysis beyond what is directly related to providing and improving our "Product" "Services".</p>
+        <ul>
+            <li>Circumvent, disable, or otherwise interfere with security-related features of the Website;</li>
+            <li>Disparage, tarnish, or otherwise harm, in our opinion, the "Website" and/or the "Product" "Services".</li>
+            <li>Use the "Product" "Services" in a manner inconsistent with any applicable laws or regulations;</li>
+            <li>Interfere with, disrupt, or create an undue burden on the "Product" "Services" or the networks or services connected to the "Product" "Services".</li>
+            <li>Share access to our "Product" "Services" with a third party (unless otherwise permitted by us separately in writing);</li>
+            <li>Lease, sell, grant, or otherwise exploit our "Product" "Services" in a way prohibited by these Terms.</li>
+            <li>Attempt to bypass any measures of the Website designed to prevent or restrict access to the "Product" "Services", or any portion of the Website.</li>
+        </ul>
 
-    <h2>Disclaimer</h2>
-    <p>The content provided in this digital course is for educational purposes only and is not intended as a substitute for clinical care. Please consult a qualified healthcare provider for guidance specific to your case. Please contact us with any questions prior to purchase as we do not offer refunds for the instant access online course.</p>
-    <p>We respect your privacy and will not share or request additional personal information from you after purchase.</p>
+        <h2>User Content and Conduct</h2>
 
-    <h2>Official Representation</h2>
-    <p>Visionary Tomorrows© is represented solely through the following official channels:</p>
-    <ul>
-      <li><strong>Official website:</strong> <a href="https://maricairns.github.io/visionarytomorrows">maricairns.github.io/visionarytomorrows</a></li>
-      <li><strong>Official LinkedIn (Company):</strong> <a href="https://www.linkedin.com/company/visionarytomorrows/">linkedin.com/company/visionarytomorrows/</a></li>
-      <li><strong>Official LinkedIn (Founder):</strong> <a href="https://www.linkedin.com/in/maricairns/">linkedin.com/in/maricairns/</a></li>
-    </ul>
-    <p>We do not maintain any other social media profiles, YouTube channels, or online communities under the name Visionary Tomorrows© (or for Dr Mari Cairns). Any additional profiles, videos, or content using the name Visionary Tomorrows© are not affiliated with or endorsed by us unless explicitly stated.</p>
-  </div>
+        <p>In case our "Product" "Services" enables you to share your content ("User Content"), you retain all intellectual property rights in, and are responsible for, the User Content you create and share. However, by submitting User Content, you grant other Users and the Company the right to share your User Content via any social media platform. As a User of the Website, you agree not to post any Prohibited Content:</p>
 
-  <footer class="site-footer">
-    <img src="images/NEWVT_copy_2.png" alt="Visionary Tomorrows" class="footer-logo">
-    <p class="copyright">© 2026 Visionary Tomorrows. All Rights Reserved</p>
-    <p class="made-with">Made with ☕ and ❤️</p>
-    <p class="vision-mission">the vision, a world where mental health is prioritised</p>
-    <p class="vision-mission">the mission, tomorrow starts with your wellbeing today</p>
-    <div class="footer-nav">
-      <a href="companies.html">Companies</a>
-      <a href="course-content.html">Course Content</a>
-      <a href="faqs.html">FAQs</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/maricairns/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://maricairns.github.io/visionarytomorrows" aria-label="Website"><i class="fas fa-globe"></i></a>
-      <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="legal-links">
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
+        <ul>
+            <li>Profane language or content;</li>
+            <li>Content that promotes, fosters, or perpetuates discrimination on the basis of race, religion, gender, marital status, familial status, national origin, age, mental or physical disability, sexual orientation, gender identity, source of income, or other protected status under applicable law;</li>
+            <li>Inappropriate sexual content or links to inappropriate sexual content, nudity, or obscene material;</li>
+            <li>Conduct or encouragement of illegal activity;</li>
+            <li>Private and confidential information;</li>
+            <li>Content that violates the legal ownership interests of any other party.</li>
+        </ul>
 
-  <script>
-    const t = document.querySelector('.nav-toggle'), n = document.querySelector('.site-header nav');
-    if (t && n) t.addEventListener('click', () => { n.classList.toggle('active'); t.textContent = n.classList.contains('active') ? '✕' : '☰'; });
-  </script>
+        <h2>Intellectual Property of Our Company</h2>
+
+        <p>Unless otherwise indicated, this Website is our proprietary property and all source code, databases, functionality, software, Website designs, audio, video, text, photographs, and graphics on the Website (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us. These are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws in the United Kingdom, international copyright laws, and international conventions.</p>
+
+        <h2>Term and Termination</h2>
+
+        <p>The Company may terminate your access to all or any part of the "Website", "Product" "Services" at any time, with or without cause, and with or without notice, effective immediately. You can stop using our "Product" "Services" at any time. You may delete your User Account by using the Website features or notifying us at <a href="mailto:mari.cairns@gmail.com">mari.cairns@gmail.com</a>.</p>
+
+        <h2>Indemnification</h2>
+
+        <p>You agree to indemnify, defend, and hold harmless the Company, its affiliates, officers, directors, employees, agents, and licensors from and against any and all losses, expenses (including reasonable attorneys' fees), claims, and demands, due to, arising out of, or in connection with your User Content, your use of the "Product" "Services", your violation of these Terms, or your violation of any rights of a third party.</p>
+
+        <h2>Changes to Terms</h2>
+
+        <p>We reserve the right to revise these Terms at any time. We may post an updated version of these Terms on the Website, and we will notify you of the change with a notice when you visit the Website again. You are responsible for reviewing these Terms regularly. If you do not agree to any changes, your sole remedy is to discontinue using the Website and the "Product" "Services".</p>
+
+        <h2>Severability</h2>
+
+        <p>If any provision of these Terms is found to be unenforceable, the remainder of these Terms will remain in full force and effect. If we do not immediately enforce a provision of these Terms, it does not mean that we waive any rights under these Terms or as granted by law.</p>
+
+        <h2>Applicable Law and Jurisdiction</h2>
+
+        <p>These Terms and conditions are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+        <h2>Entire Agreement</h2>
+
+        <p>These Terms constitute the entire agreement between you and us regarding the use of this Website and supersede any prior or contemporaneous agreements, representations, or warranties, whether written or oral, relating to the "Product" "Services" or "Website".</p>
+
+        <h2>Data Security and Confidentiality</h2>
+
+        <p>We prioritise the confidentiality and security of your personal information. We do not share your personal information with third parties beyond the specific purposes outlined in this policy. We will not request additional information from you outside of what you provide through the contact form unless necessary for the delivery of "Product" "Services" or as otherwise requested by you. Additionally, we do not use your data for any purposes involving training, profiling, or automated analysis beyond what is directly related to providing and improving our "Product" "Services".</p>
+
+        <h2>Disclaimer</h2>
+
+        <p>The content provided in this digital course is for educational purposes only and is not intended as a substitute for clinical care. Please consult a qualified healthcare provider for guidance specific to your case. Please contact us with any questions prior to purchase as we do not offer refunds for the instant access online course.</p>
+
+        <p>We respect your privacy and will not share or request additional personal information from you after purchase.</p>
+
+        <h2>Official Representation</h2>
+
+        <p>Visionary Tomorrows© is represented solely through the following official channels:</p>
+
+        <ul>
+            <li><strong>Official website:</strong> <a href="https://maricairns.github.io/visionarytomorrows">maricairns.github.io/visionarytomorrows</a></li>
+            <li><strong>Official LinkedIn (Company):</strong> <a href="https://www.linkedin.com/company/visionarytomorrows/" target="_blank" rel="noopener noreferrer">linkedin.com/company/visionarytomorrows/</a></li>
+            <li><strong>Official LinkedIn (Founder):</strong> <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maricairns/</a></li>
+        </ul>
+
+        <p>We do not maintain any other social media profiles, YouTube channels, or online communities under the name Visionary Tomorrows© (or for Dr Mari Cairns). Any additional profiles, videos, or content using the name Visionary Tomorrows© are not affiliated with or endorsed by us unless explicitly stated.</p>
+    </main>
+
+    <!-- ============ COFFEE CUPS ============ -->
+    <section class="coffee-section">
+        <img src="images/coffee_cups.png" alt="Visionary Tomorrows branded coffee cups">
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <p class="footer-copyright">&copy; 2026 Visionary Tomorrows. All Rights Reserved</p>
+        <p class="footer-made-with">Made with ☕ and ❤️</p>
+        <p class="footer-vision"><strong>the vision, a world where mental health is prioritised</strong></p>
+        <p class="footer-mission"><strong>the mission, tomorrow starts with your wellbeing today</strong></p>
+        <nav class="footer-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
 </body>
 </html>
