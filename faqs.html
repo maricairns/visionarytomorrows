@@ -1,1 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs — Visionary Tomorrows</title>
+    <link rel="icon" type="image/png" href="images/Banner_Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ============ RESET ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* ============ BASE ============ */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            line-height: 1.8;
+            color: #000000;
+            background-color: #f7f7f7;
+        }
+
+        a {
+            color: #2aad69;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ============ HEADER ============ */
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .header-logo img {
+            height: 65px;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .header-nav a {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: #2aad69;
+        }
+
+        .btn-login {
+            background-color: #2aad69;
+            color: #ffffff !important;
+            padding: 13px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #239b5b;
+            text-decoration: none !important;
+        }
+
+        /* ============ FAQ SECTION ============ */
+        .faq-section {
+            background-color: #f7f7f7;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 80px 60px;
+        }
+
+        .faq-section h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        /* ============ ACCORDION ============ */
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-item:first-of-type {
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000000;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .faq-toggle {
+            font-size: 28px;
+            font-weight: 300;
+            color: #000000;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333333;
+            padding-bottom: 22px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* ============ NAMEPLAQUE + CTA SECTION ============ */
+        .cta-section {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .cta-section img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            text-decoration: none;
+        }
+
+        .btn-cta-green {
+            background-color: #2aad69;
+            color: #ffffff;
+        }
+
+        .btn-cta-green:hover {
+            background-color: #239b5b;
+        }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials-section {
+            background-color: #333333;
+            padding: 60px 40px;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .testimonial-stars {
+            color: #f5a623;
+            font-size: 18px;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-person {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .testimonial-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-info {
+            text-align: left;
+        }
+
+        .testimonial-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .testimonial-location {
+            font-size: 16px;
+            color: #cccccc;
+        }
+
+        .flag-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 6px;
+            width: 24px;
+            height: 18px;
+        }
+
+        /* ============ COFFEE CUPS SECTION ============ */
+        .coffee-section {
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 0 20px 0;
+        }
+
+        .coffee-section img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ============ FOOTER ============ */
+        .site-footer {
+            background-color: #c0c0c0;
+            background-image: url('images/Background_light.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 50px 30px 45px;
+            width: 100%;
+        }
+
+        .footer-copyright {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+
+        .footer-made-with {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 18px;
+        }
+
+        .footer-vision,
+        .footer-mission {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 6px;
+        }
+
+        .footer-mission {
+            margin-bottom: 25px;
+        }
+
+        .footer-nav {
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: #333333;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        .footer-nav a:hover {
+            color: #2aad69;
+        }
+
+        .footer-social {
+            margin-bottom: 22px;
+        }
+
+        .footer-social a {
+            color: #000000;
+            font-size: 30px;
+            margin: 0 16px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: #2aad69;
+        }
+
+        .footer-legal a {
+            color: #666666;
+            font-size: 18px;
+            margin: 0 14px;
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: #2aad69;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 12px 20px;
+            }
+
+            .header-logo img {
+                height: 50px;
+            }
+
+            .header-nav {
+                gap: 18px;
+            }
+
+            .header-nav a {
+                font-size: 15px;
+            }
+
+            .btn-login {
+                padding: 9px 20px;
+                font-size: 15px;
+            }
+
+            .faq-section {
+                padding: 30px 25px 40px;
+            }
+
+            .faq-section h1 {
+                font-size: 32px;
+            }
+
+            .faq-question h2 {
+                font-size: 18px;
+            }
+
+            .faq-answer p {
+                font-size: 17px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cta-section img {
+                max-width: 280px;
+            }
+
+            .coffee-section img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-nav a:not(.btn-login) {
+                display: none;
+            }
+
+            .faq-section {
+                padding: 25px 16px 35px;
+            }
+
+            .faq-section h1 {
+                font-size: 28px;
+            }
+
+            .faq-question h2 {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/Banner_Logo.png" alt="Visionary Tomorrows — Inspire | Mental Health | Awareness">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="#" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- ============ FAQ ACCORDION ============ -->
+    <main class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>How will the online course support my mental health and wellbeing?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The online course was designed, developed, and built to distil core concepts and patterns. This information and knowledge can be applied in your everyday life. You'll learn what to look out for, understand how key processes work, and identify potential harms sooner. As a licensed/chartered clinical psychologist, I've spent thousands of hours meeting with people. These are the things people navigate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>How do I access the online course, and will I be able to revisit it?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The online course has instant access. After purchasing, simply create an account with your email and a password to log in and get started. Complete the course at your own pace, in your own space. You'll have lifetime access and can revisit the course whenever you like. It's also optimised with subtitles.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>How do I get the course for people in my company?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Complete the get custom quote form, and I'll provide a quote based on the number of people. Each person will receive a unique access code for the online course.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>What inspired you to create the online course?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>In 2021, my life changed when I lived through PTSD myself. As with many life-changing experiences, it was only then that I truly understood and felt psychology's real-life impact. Developing this course was my way to pay it forward.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>Can I give this course as a gift?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, please email me and I will generate a gift card with a unique access code. Give the gift of mental health and wellbeing.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h2>What does the logo symbolise?</h2>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The three mountains represent our past, present, and future. The path is purposefully set between the present and the future—between where you are now and where you're headed. And green is the international colour for mental health awareness.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ NAMEPLAQUE + CTA ============ -->
+    <section class="cta-section">
+        <img src="images/nameplaque.png" alt="Dr Mari Cairns — DClinPsych (Oxford) CPsychol AFBPsS MBA">
+        <div class="cta-buttons">
+            <a href="#" class="btn-cta btn-cta-green">Get instant access</a>
+            <a href="course-content.html" class="btn-cta btn-cta-green">Course Content</a>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials-section">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Inspired focus on the things that matter"</p>
+                <p class="testimonial-stars">★★★★★</p>
+                <div class="testimonial-person">
+                    <img src="images/Petar.png" alt="Petar" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Petar <img src="https://flagcdn.com/24x18/gb-sct.png" alt="Scotland" class="flag-icon"></p>
+                        <p class="testimonial-location">Glasgow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"SO thought provoking. Life meditation"</p>
+                <p class="testimonial-stars">★★★★★</p>
+                <div class="testimonial-person">
+                    <img src="images/Allison.png" alt="Allison" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Allison <img src="https://flagcdn.com/24x18/nz.png" alt="New Zealand" class="flag-icon"></p>
+                        <p class="testimonial-location">Auckland</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Inspirational AND thought provoking"</p>
+                <p class="testimonial-stars">★★★★★</p>
+                <div class="testimonial-person">
+                    <img src="images/Carlo.png" alt="Carlo" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Carlo <img src="https://flagcdn.com/24x18/ae.png" alt="UAE" class="flag-icon"></p>
+                        <p class="testimonial-location">Dubai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <p class="footer-copyright">&copy; 2026 Visionary Tomorrows. All Rights Reserved</p>
+        <p class="footer-made-with">Made with ☕ and ❤️</p>
+        <p class="footer-vision"><strong>the vision, a world where mental health is prioritised</strong></p>
+        <p class="footer-mission"><strong>the mission, tomorrow starts with your wellbeing today</strong></p>
+        <nav class="footer-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- ============ ACCORDION JS ============ -->
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle the clicked item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
