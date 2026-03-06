@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individuals — Visionary Tomorrows</title>
+    <link rel="icon" type="image/png" href="images/Banner_Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; font-size: 22px; line-height: 1.8; color: #000000; background-color: #f7f7f7; }
+        a { color: #2aad69; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* HEADER */
+        .site-header { background-color: #ffffff; padding: 15px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .header-logo img { height: 65px; }
+        .header-nav { display: flex; align-items: center; gap: 40px; }
+        .header-nav a { color: #000000; font-size: 18px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+        .header-nav a:hover { color: #2aad69; }
+        .btn-login { background-color: #2aad69; color: #ffffff !important; padding: 13px 35px; border-radius: 6px; font-weight: 600; font-size: 18px; transition: background-color 0.2s; }
+        .btn-login:hover { background-color: #239b5b; text-decoration: none !important; }
+        .btn-green { display: inline-block; background-color: #2aad69; color: #ffffff; padding: 14px 35px; border-radius: 6px; font-size: 18px; font-weight: 600; text-decoration: none; transition: background-color 0.2s; }
+        .btn-green:hover { background-color: #239b5b; text-decoration: none; }
+
+        /* HERO */
+        .hero { background-image: url('images/hero.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; padding: 60px 80px 80px; min-height: 350px; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.55); }
+        .hero-content { position: relative; z-index: 1; }
+        .hero-label { font-size: 16px; font-weight: 500; color: #333333; margin-bottom: 5px; }
+        .hero h1 { font-size: 42px; font-weight: 700; color: #000000; margin-bottom: 10px; line-height: 1.25; }
+        .hero p { font-size: 18px; color: #333333; margin-bottom: 25px; }
+
+        /* LIFE CAN BE TOUGH */
+        .tough-section { background-color: #ffffff; padding: 60px 80px; }
+        .tough-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; }
+        .tough-text { flex: 1; }
+        .tough-text h2 { font-size: 30px; font-weight: 700; color: #000000; margin-bottom: 20px; }
+        .tough-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
+        .tough-image { flex-shrink: 0; }
+        .tough-image img { max-width: 350px; width: 100%; height: auto; }
+
+        /* COURSE OVERVIEW */
+        .course-overview { background-color: #e0e0e0; padding: 60px 40px; }
+        .course-overview-inner { max-width: 1100px; margin: 0 auto; text-align: center; margin-bottom: 50px; }
+        .course-overview-label { font-size: 14px; font-weight: 500; color: #555555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .course-overview-inner h2 { font-size: 38px; font-weight: 700; color: #000000; margin-bottom: 20px; line-height: 1.3; }
+        .course-overview-inner p { font-size: 20px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
+
+        /* PRICING */
+        .pricing-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 40px; }
+        .pricing-text { flex: 0 0 auto; max-width: 400px; }
+        .pricing-price { font-size: 28px; font-weight: 700; color: #000000; margin-bottom: 15px; }
+        .pricing-text ul { padding-left: 25px; margin-bottom: 25px; }
+        .pricing-text ul li { font-size: 18px; line-height: 1.8; margin-bottom: 5px; color: #333333; }
+        .pricing-image { flex: 1; text-align: right; }
+        .pricing-image img { max-width: 700px; width: 100%; height: auto; }
+
+        /* BIO SECTION */
+        .bio-section { background-color: #ffffff; padding: 50px 40px; }
+        .bio-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: stretch; gap: 0; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 10px rgba(0,0,0,0.1); }
+        .bio-photo { flex-shrink: 0; width: 420px; }
+        .bio-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .bio-text { flex: 1; padding: 40px 45px; }
+        .bio-text h2 { font-size: 36px; font-weight: 700; color: #000000; margin-bottom: 20px; }
+        .bio-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
+        .bio-credentials { font-size: 19px; font-weight: 700; color: #000000; margin-bottom: 15px; }
+        .bio-social a { color: #000000; font-size: 26px; margin-right: 18px; text-decoration: none; transition: color 0.2s; }
+        .bio-social a:hover { color: #2aad69; }
+
+        /* CREDENTIALS */
+        .credentials-section { background-color: #ffffff; padding: 10px 40px 20px; text-align: center; }
+        .credentials-grid { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 60px; }
+        .credentials-grid img { max-height: 130px; width: auto; }
+
+        /* IS THIS COURSE RIGHT FOR ME */
+        .right-for-me { background-color: #c0c0c0; background-image: url('images/Background_light.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; padding: 60px 80px; }
+        .right-for-me-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 50px; }
+        .right-for-me-image { flex-shrink: 0; }
+        .right-for-me-image img { max-width: 300px; width: 100%; height: auto; border-radius: 8px; }
+        .right-for-me-text { flex: 1; }
+        .right-for-me-text h2 { font-size: 32px; font-weight: 700; color: #000000; margin-bottom: 20px; }
+        .right-for-me-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
+
+        /* TESTIMONIALS */
+        .testimonials-section { background-color: #333333; padding: 60px 40px; }
+        .testimonials-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .testimonial-card { text-align: center; }
+        .testimonial-quote { font-size: 16px; font-style: normal; color: #ffffff; margin-bottom: 12px; line-height: 1.4; }
+        .testimonial-stars { margin-bottom: 20px; }
+        .testimonial-stars i { color: #FFD700; font-size: 20px; margin: 0 2px; }
+        .testimonial-person { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .testimonial-photo { width: 75px; height: 75px; border-radius: 50%; object-fit: cover; }
+        .testimonial-info { text-align: left; }
+        .testimonial-name { font-size: 24px; font-weight: 700; color: #ffffff; }
+        .testimonial-location { font-size: 16px; color: #cccccc; margin-top: 2px; }
+        .flag-icon { display: inline-block; vertical-align: middle; margin-left: 6px; width: 24px; height: 18px; }
+
+        /* GIFT VOUCHER */
+        .gift-section { background-color: #ffffff; padding: 60px 80px; }
+        .gift-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 50px; }
+        .gift-text { flex: 1; }
+        .gift-text .gift-label { font-size: 14px; font-weight: 500; color: #555555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .gift-text h2 { font-size: 30px; font-weight: 700; color: #000000; margin-bottom: 15px; line-height: 1.3; }
+        .gift-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 25px; }
+        .gift-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .gift-image { flex-shrink: 0; }
+        .gift-image img { max-width: 400px; width: 100%; height: auto; }
+
+        /* COFFEE CUPS */
+        .coffee-section { background-color: #f7f7f7; text-align: center; padding: 0 20px 0; }
+        .coffee-section img { max-width: 380px; width: 100%; height: auto; }
+
+        /* FOOTER */
+        .site-footer { background-color: #c0c0c0; background-image: url('images/Background_light.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; text-align: center; padding: 50px 30px 45px; width: 100%; }
+        .footer-copyright { font-size: 20px; color: #333333; margin-bottom: 8px; }
+        .footer-made-with { font-size: 20px; color: #333333; margin-bottom: 18px; }
+        .footer-vision, .footer-mission { font-size: 22px; font-weight: 700; color: #000000; margin-bottom: 6px; }
+        .footer-mission { margin-bottom: 25px; }
+        .footer-nav { margin-bottom: 20px; }
+        .footer-nav a { color: #333333; font-size: 18px; font-weight: 500; margin: 0 12px; text-decoration: none; }
+        .footer-nav a:hover { color: #2aad69; }
+        .footer-social { margin-bottom: 22px; }
+        .footer-social a { color: #000000; font-size: 30px; margin: 0 16px; text-decoration: none; transition: color 0.2s; }
+        .footer-social a:hover { color: #2aad69; }
+        .footer-legal a { color: #666666; font-size: 18px; margin: 0 14px; text-decoration: none; }
+        .footer-legal a:hover { color: #2aad69; }
+
+        /* RESPONSIVE 768px */
+        @media (max-width: 768px) {
+            .site-header { padding: 12px 20px; }
+            .header-logo img { height: 50px; }
+            .header-nav { gap: 18px; }
+            .header-nav a { font-size: 15px; }
+            .btn-login { padding: 9px 20px; font-size: 15px; }
+
+            .hero { padding: 40px 25px 60px; }
+            .hero h1 { font-size: 30px; }
+
+            .tough-section { padding: 40px 25px; }
+            .tough-inner { flex-direction: column; }
+            .tough-text h2 { font-size: 24px; }
+            .tough-text p { font-size: 17px; }
+            .tough-image img { max-width: 280px; }
+
+            .course-overview { padding: 40px 25px; }
+            .course-overview-inner h2 { font-size: 28px; }
+            .course-overview-inner p { font-size: 18px; }
+            .pricing-inner { flex-direction: column; }
+            .pricing-text { max-width: 100%; }
+            .pricing-image { text-align: center; }
+            .pricing-image img { max-width: 350px; }
+
+            .bio-inner { flex-direction: column; }
+            .bio-photo { width: 100%; max-height: 350px; }
+            .bio-photo img { height: 350px; width: 100%; }
+            .bio-text { padding: 25px; }
+            .bio-text h2 { font-size: 28px; }
+            .bio-text p { font-size: 17px; }
+
+            .credentials-grid { flex-wrap: wrap; gap: 30px; }
+            .credentials-grid img { max-height: 80px; }
+
+            .right-for-me { padding: 40px 25px; }
+            .right-for-me-inner { flex-direction: column; }
+            .right-for-me-image img { max-width: 220px; }
+            .right-for-me-text h2 { font-size: 26px; }
+            .right-for-me-text p { font-size: 17px; }
+
+            .testimonials-grid { grid-template-columns: 1fr; gap: 40px; }
+
+            .gift-section { padding: 40px 25px; }
+            .gift-inner { flex-direction: column; }
+            .gift-text h2 { font-size: 24px; }
+            .gift-image img { max-width: 300px; }
+
+            .coffee-section img { max-width: 150px; }
+        }
+
+        /* RESPONSIVE 480px */
+        @media (max-width: 480px) {
+            .header-nav a:not(.btn-login) { display: none; }
+
+            .hero { padding: 30px 16px 50px; }
+            .hero h1 { font-size: 26px; }
+
+            .tough-section { padding: 30px 16px; }
+            .tough-text h2 { font-size: 22px; }
+            .tough-image img { max-width: 220px; }
+
+            .course-overview { padding: 30px 16px; }
+            .course-overview-inner h2 { font-size: 24px; }
+            .course-overview-inner p { font-size: 16px; }
+            .pricing-image img { max-width: 260px; }
+
+            .bio-section { padding: 30px 16px; }
+            .bio-text { padding: 20px; }
+            .bio-text h2 { font-size: 24px; }
+            .bio-text p { font-size: 16px; }
+
+            .credentials-section { padding: 10px 16px 15px; }
+            .credentials-grid { gap: 20px; }
+            .credentials-grid img { max-height: 60px; }
+
+            .right-for-me { padding: 30px 16px; }
+            .right-for-me-text h2 { font-size: 22px; }
+
+            .gift-section { padding: 30px 16px; }
+            .gift-text h2 { font-size: 22px; }
+            .gift-image img { max-width: 240px; }
+            .gift-buttons { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-logo"><a href="index.html"><img src="images/Banner_Logo.png" alt="Visionary Tomorrows — Inspire | Mental Health | Awareness"></a></div>
+        <nav class="header-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="#" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">Individuals</p>
+            <h1>Your Mental Health Is The Foundation For Your Life</h1>
+            <p>Practical psychology and your everyday life online course</p>
+            <a href="course-content.html" class="btn-green">Learn more</a>
+        </div>
+    </section>
+
+    <!-- LIFE CAN BE TOUGH -->
+    <section class="tough-section">
+        <div class="tough-inner">
+            <div class="tough-text">
+                <h2>Life can be tough at times</h2>
+                <p>Just like physical health, mental health is a core part of being human, and it influences everything. Our mental health and wellbeing impact our decisions, relationships, careers, overall lives, and quality of life. Every. Day.</p>
+                <p>And life can be tough at times.</p>
+                <p>While there is no secret formula, understanding key concepts and patterns can be invaluable to you.</p>
+                <p>Once you know these core concepts and patterns, the information and knowledge can benefit you for life.</p>
+            </div>
+            <div class="tough-image">
+                <img src="images/green.png" alt="Are You... Stuck? Unsure? Confused?">
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE OVERVIEW + PRICING -->
+    <section class="course-overview">
+        <div class="course-overview-inner">
+            <p class="course-overview-label">Course overview</p>
+            <h2>Practical Psychology And Your Everyday Life</h2>
+            <p>The online course distils core concepts and patterns. It is divided into four main sections that cover mental health and wellbeing in your everyday life, relationships, career, and society—areas that interconnect and influence each other. You'll learn what to look out for, understand how key processes work, and identify potential harms sooner.</p>
+            <p>Invest in your mental health and wellbeing for the cost of one professional therapy session.</p>
+        </div>
+        <div class="pricing-inner">
+            <div class="pricing-text">
+                <p class="pricing-price">&pound;199</p>
+                <ul>
+                    <li>Instant access</li>
+                    <li>49 lessons, 3 hours of content</li>
+                    <li>Bonus material included</li>
+                    <li>Short videos</li>
+                    <li>Self-paced</li>
+                    <li>Lifetime access</li>
+                    <li>No referral needed</li>
+                    <li>Gift cards available</li>
+                </ul>
+                <a href="course-content.html" class="btn-green">Course Content</a>
+            </div>
+            <div class="pricing-image">
+                <img src="images/box.png" alt="Practical Psychology And Your Everyday Life Digital Course">
+            </div>
+        </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="bio-section">
+        <div class="bio-inner">
+            <div class="bio-photo">
+                <img src="images/headshot.png" alt="Dr Mari Cairns">
+            </div>
+            <div class="bio-text">
+                <h2>Hi, I'm Mari Cairns</h2>
+                <p>I am a licensed clinical psychologist with over two decades' experience in public and private healthcare in England. In 2021, my life changed when I lived through PTSD myself. As with many life-changing experiences, it was only then that I truly understood and felt psychology's real-life impact.</p>
+                <p>Developing this course was my way to pay it forward. I designed and built it based on thousands of hours of clinical experience. The course distils key practical concepts and patterns, with a focus on fundamental things that impact your mental health and wellbeing.</p>
+                <p class="bio-credentials">Dr Mari Cairns  DClinPsych (University of Oxford) CPsychol AFBPsS MBA</p>
+                <div class="bio-social">
+                    <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="credentials-section">
+        <div class="credentials-grid">
+            <img src="images/British_Psyc_Society.png" alt="British Psychological Society — Chartered Psychologist">
+            <img src="images/Oxford.png" alt="University of Oxford">
+            <img src="images/HCPC.png" alt="HCPC Registered">
+        </div>
+    </section>
+
+    <!-- IS THIS COURSE RIGHT FOR ME -->
+    <section class="right-for-me">
+        <div class="right-for-me-inner">
+            <div class="right-for-me-image">
+                <img src="images/thumbnail.png" alt="Welcome message from Mari">
+            </div>
+            <div class="right-for-me-text">
+                <h2>Is this course right for me?</h2>
+                <p>Not everyone meets with a psychologist, but you can benefit from knowing key things to look out for. The information is a major advantage for your mental health and wellbeing. If you want to know how your mental health and wellbeing form the foundation for the life you want, this course is for you. Your future self will thank you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Life changing decisions can be made here. Very thought provoking! There's something for everyone to relate to, wherever you are in life"</p>
+                <p class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <div class="testimonial-person">
+                    <img src="images/Lindsay.png" alt="Lindsay" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Lindsay <img src="https://flagcdn.com/24x18/gb.png" alt="UK" class="flag-icon"></p>
+                        <p class="testimonial-location">Cheshire</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Less than meeting for therapy. More than using technology apps. I notice things I've never noticed before"</p>
+                <p class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <div class="testimonial-person">
+                    <img src="images/Hermien.png" alt="Hermien" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Hermien <img src="https://flagcdn.com/24x18/za.png" alt="South Africa" class="flag-icon"></p>
+                        <p class="testimonial-location">Johannesburg</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Simplicity being the ultimate sophistication has never been truer. SO many thought-provoking insights. In easily digested format"</p>
+                <p class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <div class="testimonial-person">
+                    <img src="images/Chris.png" alt="Chris" class="testimonial-photo">
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Chris <img src="https://flagcdn.com/24x18/nz.png" alt="New Zealand" class="flag-icon"></p>
+                        <p class="testimonial-location">Pukekohe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIFT VOUCHER -->
+    <section class="gift-section">
+        <div class="gift-inner">
+            <div class="gift-text">
+                <p class="gift-label">Gift Voucher</p>
+                <h2>Know someone who could benefit from this course?</h2>
+                <p>Give the gift of mental health and wellbeing</p>
+                <div class="gift-buttons">
+                    <a href="faqs.html" class="btn-green">FAQs</a>
+                    <a href="#" class="btn-green">Get instant access</a>
+                </div>
+            </div>
+            <div class="gift-image">
+                <img src="images/gift.png" alt="Gift Certificate — Practical Psychology And Your Everyday Life Digital Course">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p class="footer-copyright">&copy; 2026 Visionary Tomorrows. All Rights Reserved</p>
+        <p class="footer-made-with">Made with ☕ and ❤️</p>
+        <p class="footer-vision"><strong>the vision, a world where mental health is prioritised</strong></p>
+        <p class="footer-mission"><strong>the mission, tomorrow starts with your wellbeing today</strong></p>
+        <nav class="footer-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
