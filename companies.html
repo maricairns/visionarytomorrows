@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies — Visionary Tomorrows</title>
+    <link rel="icon" type="image/png" href="images/Banner_Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ============ RESET ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ============ BASE ============ */
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            line-height: 1.8;
+            color: #000000;
+            background-color: #f7f7f7;
+        }
+
+        a { color: #2aad69; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ============ HEADER ============ */
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .header-logo img { height: 65px; }
+
+        .header-nav { display: flex; align-items: center; gap: 40px; }
+
+        .header-nav a {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover { color: #2aad69; }
+
+        .btn-login {
+            background-color: #2aad69;
+            color: #ffffff !important;
+            padding: 13px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #239b5b;
+            text-decoration: none !important;
+        }
+
+        /* ============ HERO ============ */
+        .companies-hero {
+            background-image: url('images/hero_companies.png');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            padding: 60px 80px 80px;
+            min-height: 300px;
+        }
+
+        .companies-hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .companies-hero p {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .btn-green {
+            display: inline-block;
+            background-color: #2aad69;
+            color: #ffffff;
+            padding: 14px 35px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-green:hover {
+            background-color: #239b5b;
+            text-decoration: none;
+        }
+
+        /* ============ STATEMENT ============ */
+        .statement-section {
+            background-color: #ffffff;
+            padding: 50px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .statement-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .statement-section p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333333;
+            margin-bottom: 18px;
+        }
+
+        /* ============ COURSE OVERVIEW ============ */
+        .course-overview {
+            background-color: #f7f7f7;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .course-overview-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-overview-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .course-overview h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .course-overview p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333333;
+            margin-bottom: 18px;
+        }
+
+        /* ============ PRICING ============ */
+        .pricing-section {
+            background-color: #ffffff;
+            padding: 50px 80px;
+        }
+
+        .pricing-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .pricing-text {
+            flex: 1;
+        }
+
+        .pricing-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .pricing-text ul {
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .pricing-text ul li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        .pricing-image {
+            flex-shrink: 0;
+        }
+
+        .pricing-image img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ============ GREEN BANNER ============ */
+        .green-banner {
+            background-color: #2aad69;
+            padding: 40px 40px;
+            text-align: center;
+        }
+
+        .green-banner p {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ============ ABOUT DR MARI CAIRNS ============ */
+        .about-section {
+            background-color: #f7f7f7;
+            padding: 60px 80px;
+        }
+
+        .about-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .about-photo {
+            flex-shrink: 0;
+        }
+
+        .about-photo img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333333;
+            margin-bottom: 18px;
+        }
+
+        .about-credentials {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .about-social a {
+            color: #000000;
+            font-size: 24px;
+            margin-right: 16px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .about-social a:hover { color: #2aad69; }
+
+        /* ============ CREDENTIAL BADGES ============ */
+        .credentials-section {
+            background-color: #f7f7f7;
+            padding: 30px 40px 50px;
+            text-align: center;
+        }
+
+        .credentials-grid {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .credentials-grid img {
+            max-height: 100px;
+            width: auto;
+        }
+
+        /* ============ BENEFITS ============ */
+        .benefits-section {
+            background-color: #ffffff;
+            padding: 60px 80px;
+        }
+
+        .benefits-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .benefits-section h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+
+        .benefits-section ul {
+            padding-left: 25px;
+            margin-bottom: 22px;
+        }
+
+        .benefits-section ul li {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        /* ============ PINK BANNER ============ */
+        .pink-banner {
+            background-color: #AD2A6E;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .pink-banner p {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============ CTA SECTION ============ */
+        .cta-bottom {
+            background-color: #f7f7f7;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .cta-bottom h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ============ FOOTER ============ */
+        .site-footer {
+            background-color: #c0c0c0;
+            background-image: url('images/Background_light.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 50px 30px 45px;
+            width: 100%;
+        }
+
+        .footer-copyright { font-size: 20px; color: #333333; margin-bottom: 8px; }
+        .footer-made-with { font-size: 20px; color: #333333; margin-bottom: 18px; }
+        .footer-vision, .footer-mission { font-size: 22px; font-weight: 700; color: #000000; margin-bottom: 6px; }
+        .footer-mission { margin-bottom: 25px; }
+        .footer-nav { margin-bottom: 20px; }
+        .footer-nav a { color: #333333; font-size: 18px; font-weight: 500; margin: 0 12px; text-decoration: none; }
+        .footer-nav a:hover { color: #2aad69; }
+        .footer-social { margin-bottom: 22px; }
+        .footer-social a { color: #000000; font-size: 30px; margin: 0 16px; text-decoration: none; transition: color 0.2s; }
+        .footer-social a:hover { color: #2aad69; }
+        .footer-legal a { color: #666666; font-size: 18px; margin: 0 14px; text-decoration: none; }
+        .footer-legal a:hover { color: #2aad69; }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .site-header { padding: 12px 20px; }
+            .header-logo img { height: 50px; }
+            .header-nav { gap: 18px; }
+            .header-nav a { font-size: 15px; }
+            .btn-login { padding: 9px 20px; font-size: 15px; }
+
+            .companies-hero { padding: 40px 25px 60px; }
+            .companies-hero h1 { font-size: 30px; }
+
+            .statement-section { padding: 30px 25px; }
+            .pricing-inner { flex-direction: column; }
+            .pricing-image img { max-width: 280px; }
+
+            .about-inner { flex-direction: column; align-items: center; }
+            .about-photo img { width: 200px; height: 200px; }
+
+            .credentials-grid { flex-wrap: wrap; gap: 25px; }
+            .credentials-grid img { max-height: 70px; }
+
+            .benefits-section { padding: 40px 25px; }
+        }
+
+        @media (max-width: 480px) {
+            .header-nav a:not(.btn-login) { display: none; }
+            .companies-hero { padding: 30px 16px 50px; }
+            .companies-hero h1 { font-size: 26px; }
+            .statement-section { padding: 25px 16px; }
+            .about-inner { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/Banner_Logo.png" alt="Visionary Tomorrows — Inspire | Mental Health | Awareness">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="#" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="companies-hero">
+        <h1>Mental Health Is Company Wealth</h1>
+        <p>Practical psychology and your everyday life online course</p>
+        <a href="#course-overview" class="btn-green">Learn more</a>
+    </section>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement-section">
+        <h2>As long as we have people in companies, mental health and wellbeing will matter</h2>
+        <p>The world of work is changing. And artificial intelligence is here to stay. AI will have significant long-term impacts at individual, organisational, and societal levels. Human mental health and wellbeing will become even more important. Mental health and wellbeing are at the core of every person in your company. Invest in your people so they can invest in themselves and your company.</p>
+    </section>
+
+    <!-- ============ COURSE OVERVIEW ============ -->
+    <section class="course-overview" id="course-overview">
+        <div class="course-overview-inner">
+            <p class="course-overview-label">Course overview</p>
+            <h2>Practical Psychology And Your Everyday Life</h2>
+            <p>The online course distils core concepts and patterns. It is divided into four main sections that cover mental health and wellbeing in everyday life, relationships, career, and society—areas that interconnect and influence each other. Your people will learn what to look out for, understand how key processes work, and identify potential harms sooner. The course covers navigating toxic work environments.</p>
+            <p>Invest in the mental health and wellbeing of your people for the cost of one professional therapy session.</p>
+        </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing-section">
+        <div class="pricing-inner">
+            <div class="pricing-text">
+                <p class="pricing-price">&pound;199</p>
+                <ul>
+                    <li>49 lessons, 3 hours of content</li>
+                    <li>Bonus material included</li>
+                    <li>Individual access codes</li>
+                    <li>Self-paced learning</li>
+                    <li>Short videos</li>
+                    <li>Bulk discounts available*</li>
+                    <li>Instant access</li>
+                    <li>No referral needed</li>
+                </ul>
+                <a href="course-content.html" class="btn-green">Course Content</a>
+            </div>
+            <div class="pricing-image">
+                <img src="images/boxes.png" alt="Practical Psychology And Your Everyday Life — Company Course Packages">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GREEN BANNER ============ -->
+    <section class="green-banner">
+        <p>Mental health and wellbeing form the foundation.<br>Sustained innovation builds from there</p>
+    </section>
+
+    <!-- ============ ABOUT DR MARI CAIRNS ============ -->
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-photo">
+                <img src="images/headshot.png" alt="Dr Mari Cairns">
+            </div>
+            <div class="about-text">
+                <h2>About Dr Mari Cairns</h2>
+                <p>Dr Mari Cairns is a licensed clinical psychologist with over two decades' experience in public and private healthcare in England. She holds a doctorate in clinical psychology from the University of Oxford. In 2021, her life changed when she lived through PTSD herself and truly understood and felt psychology's real-life impact.</p>
+                <p>She developed the course as her way to pay it forward. The course was designed and built based on thousands of hours of clinical experience and distils key practical concepts and patterns that impact the mental health and wellbeing of the people in your company.</p>
+                <p class="about-credentials">DClinPsych (University of Oxford) CPsychol AFBPsS MBA</p>
+                <div class="about-social">
+                    <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CREDENTIAL BADGES ============ -->
+    <section class="credentials-section">
+        <div class="credentials-grid">
+            <img src="images/British_Psyc_Society.png" alt="British Psychological Society — Chartered Psychologist">
+            <img src="images/Oxford.png" alt="University of Oxford">
+            <img src="images/HCPC.png" alt="HCPC Registered">
+        </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="benefits-section">
+        <div class="benefits-inner">
+            <h2>Benefits of company wellbeing</h2>
+            <ul>
+                <li>Attract top talent</li>
+                <li>Increased productivity</li>
+                <li>Reduced absenteeism</li>
+                <li>Lower turnover rates</li>
+                <li>Financial performance</li>
+                <li>Employee engagement</li>
+                <li>Company reputation</li>
+                <li>Positive workplace culture</li>
+                <li>Greater creativity and innovation</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ PINK BANNER ============ -->
+    <section class="pink-banner">
+        <p>*BULK DISCOUNTS for companies, with INDIVIDUAL ACCESS CODES</p>
+    </section>
+
+    <!-- ============ BOTTOM CTA ============ -->
+    <section class="cta-bottom">
+        <h2>Sustained company success starts with company wellbeing</h2>
+        <div class="cta-buttons">
+            <a href="#" class="btn-green">Get custom quote</a>
+            <a href="faqs.html" class="btn-green">FAQs</a>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <p class="footer-copyright">&copy; 2026 Visionary Tomorrows. All Rights Reserved</p>
+        <p class="footer-made-with">Made with ☕ and ❤️</p>
+        <p class="footer-vision"><strong>the vision, a world where mental health is prioritised</strong></p>
+        <p class="footer-mission"><strong>the mission, tomorrow starts with your wellbeing today</strong></p>
+        <nav class="footer-nav">
+            <a href="companies.html">Companies</a>
+            <a href="course-content.html">Course Content</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
