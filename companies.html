@@ -40,48 +40,49 @@
 
         /* COURSE OVERVIEW + PRICING (one grey section) */
         .course-pricing-section { background-color: #e0e0e0; padding: 60px 40px; }
-        .course-overview-inner { max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 50px; }
+        .course-overview-inner { max-width: 1100px; margin: 0 auto; text-align: center; margin-bottom: 50px; }
         .course-overview-label { font-size: 14px; font-weight: 500; color: #555555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .course-overview-inner h2 { font-size: 38px; font-weight: 700; color: #000000; margin-bottom: 20px; line-height: 1.3; }
         .course-overview-inner p { font-size: 20px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
-        .pricing-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 50px; }
-        .pricing-text { flex: 1; }
+        .pricing-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 40px; }
+        .pricing-text { flex: 0 0 auto; max-width: 400px; }
         .pricing-price { font-size: 28px; font-weight: 700; color: #000000; margin-bottom: 15px; }
         .pricing-text ul { padding-left: 25px; margin-bottom: 25px; }
         .pricing-text ul li { font-size: 18px; line-height: 1.8; margin-bottom: 5px; color: #333333; }
         .pricing-image { flex: 1; text-align: right; }
-        .pricing-image img { max-width: 550px; width: 100%; height: auto; }
+        .pricing-image img { max-width: 700px; width: 100%; height: auto; }
 
         /* DARK QUOTE BANNER */
-        .dark-banner { background-color: #333333; padding: 45px 40px; text-align: center; }
-        .dark-banner p { font-size: 26px; font-weight: 700; color: #ffffff; line-height: 1.5; max-width: 800px; margin: 0 auto; }
+        .dark-banner { background-color: #333333; padding: 50px 40px; text-align: center; }
+        .dark-banner p { font-size: 30px; font-weight: 700; color: #ffffff; line-height: 1.5; max-width: 900px; margin: 0 auto; }
 
         /* ABOUT */
-        .about-section { background-color: #f7f7f7; padding: 60px 80px; }
-        .about-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 40px; }
+        .about-section { background-color: #ffffff; padding: 60px 40px; }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 50px; background-color: #ffffff; border-radius: 8px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
         .about-photo { flex-shrink: 0; }
-        .about-photo img { width: 320px; height: auto; object-fit: cover; }
+        .about-photo img { width: 380px; height: auto; object-fit: cover; border-radius: 4px; }
         .about-text { flex: 1; }
-        .about-text h2 { font-size: 34px; font-weight: 700; color: #000000; margin-bottom: 20px; }
-        .about-text p { font-size: 18px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
-        .about-credentials { font-size: 18px; font-weight: 700; color: #000000; margin-bottom: 15px; }
-        .about-social a { color: #000000; font-size: 24px; margin-right: 16px; text-decoration: none; transition: color 0.2s; }
+        .about-text h2 { font-size: 36px; font-weight: 700; color: #000000; margin-bottom: 20px; }
+        .about-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
+        .about-credentials { font-size: 19px; font-weight: 700; color: #000000; margin-bottom: 15px; }
+        .about-social a { color: #000000; font-size: 26px; margin-right: 18px; text-decoration: none; transition: color 0.2s; }
         .about-social a:hover { color: #2aad69; }
 
         /* CREDENTIALS */
-        .credentials-section { background-color: #ffffff; padding: 40px 40px 50px; text-align: center; }
-        .credentials-grid { max-width: 800px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 50px; }
-        .credentials-grid img { max-height: 120px; width: auto; }
+        .credentials-section { background-color: #f7f7f7; padding: 40px 40px 60px; text-align: center; }
+        .credentials-grid { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 40px; }
+        .credential-tile { background-color: #ffffff; border-radius: 8px; padding: 25px 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; }
+        .credential-tile img { max-height: 100px; width: auto; }
 
         /* BENEFITS */
-        .benefits-section { background-color: #ffffff; padding: 60px 80px; }
-        .benefits-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: flex-start; gap: 40px; }
-        .benefits-text { flex: 1; }
+        .benefits-section { background-color: #f0f0f0; padding: 60px 80px; }
+        .benefits-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 40px; }
+        .benefits-text { flex: 0 0 auto; max-width: 450px; }
         .benefits-section h2 { font-size: 30px; font-weight: 700; color: #000000; margin-bottom: 25px; }
         .benefits-section ul { padding-left: 25px; margin-bottom: 22px; }
         .benefits-section ul li { font-size: 20px; font-weight: 600; line-height: 1.8; margin-bottom: 8px; color: #000000; }
-        .benefits-image { flex-shrink: 0; }
-        .benefits-image img { max-width: 350px; width: 100%; height: auto; }
+        .benefits-image { flex: 1; text-align: right; }
+        .benefits-image img { max-width: 600px; width: 100%; height: auto; }
 
         /* PINK BANNER */
         .pink-banner { background-color: #AD2A6E; padding: 30px 40px; text-align: center; }
@@ -118,13 +119,13 @@
             .companies-hero h1 { font-size: 30px; }
             .statement-section { padding: 30px 25px; }
             .pricing-inner { flex-direction: column; }
-            .pricing-image img { max-width: 300px; }
-            .about-inner { flex-direction: column; align-items: center; }
-            .about-photo img { width: 220px; }
+            .pricing-image img { max-width: 350px; }
+            .about-inner { flex-direction: column; align-items: center; padding: 25px; }
+            .about-photo img { width: 250px; }
             .credentials-grid { flex-wrap: wrap; gap: 25px; }
-            .credentials-grid img { max-height: 80px; }
+            .credential-tile img { max-height: 70px; }
             .benefits-inner { flex-direction: column; }
-            .benefits-image img { max-width: 250px; }
+            .benefits-image img { max-width: 300px; }
             .benefits-section { padding: 40px 25px; }
         }
         @media (max-width: 480px) {
@@ -214,9 +215,9 @@
 
     <section class="credentials-section">
         <div class="credentials-grid">
-            <img src="images/British_Psyc_Society.png" alt="British Psychological Society — Chartered Psychologist">
-            <img src="images/Oxford.png" alt="University of Oxford">
-            <img src="images/HCPC.png" alt="HCPC Registered">
+            <div class="credential-tile"><img src="images/British_Psyc_Society.png" alt="British Psychological Society — Chartered Psychologist"></div>
+            <div class="credential-tile"><img src="images/Oxford.png" alt="University of Oxford"></div>
+            <div class="credential-tile"><img src="images/HCPC.png" alt="HCPC Registered"></div>
         </div>
     </section>
 
