@@ -81,6 +81,7 @@
         .right-for-me-image { flex-shrink: 0; }
         .right-for-me-image img { max-width: 300px; width: 100%; height: auto; border-radius: 8px; }
         .right-for-me-image iframe { max-width: 300px; width: 100%; aspect-ratio: 16/9; border-radius: 8px; }
+        .video-thumbnail-wrapper { position: relative; display: inline-block; cursor: pointer; }
         .right-for-me-text { flex: 1; }
         .right-for-me-text h2 { font-size: 32px; font-weight: 700; color: #000000; margin-bottom: 20px; }
         .right-for-me-text p { font-size: 19px; line-height: 1.8; color: #333333; margin-bottom: 18px; }
@@ -324,7 +325,12 @@
     <section class="right-for-me">
         <div class="right-for-me-inner">
             <div class="right-for-me-image">
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/6gjsHQVxI0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+                <div class="video-thumbnail-wrapper" onclick="this.innerHTML='<iframe width=\'300\' height=\'169\' src=\'https://www.youtube.com/embed/6gjsHQVxI0o?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen style=\'border-radius: 8px;\'></iframe>'">
+                    <img src="images/thumbnail.png" alt="Welcome message from Mari" style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; cursor: pointer;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        <div style="width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #ffffff; margin-left: 3px;"></div>
+                    </div>
+                </div>
             </div>
             <div class="right-for-me-text">
                 <h2>Is this course right for me?</h2>
