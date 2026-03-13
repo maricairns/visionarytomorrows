@@ -647,7 +647,7 @@
             <a href="companies.html">Companies</a>
             <a href="course-content.html">Course Content</a>
             <a href="faqs.html">FAQs</a>
-            <a href="#" class="btn-login">Login</a>
+            <a href="course-player.html" class="btn-login">Login</a>
         </nav>
     </header>
 
@@ -659,7 +659,7 @@
             <p class="course-hero-meta">Course &bull; 49 Lessons</p>
             <p class="course-hero-desc">Designed and developed by a licensed clinical psychologist, this course distils core concepts and patterns into a 3-hour series of short videos to support your mental health and wellbeing.</p>
             <p class="course-hero-desc">You'll learn what to look out for, understand how key processes work, and identify potential harms sooner. The information and knowledge is transferable across all areas of your life.</p>
-            <a href="#" class="btn-buy">Buy now</a>
+            <a href="https://buy.stripe.com/6oU00k9T27tC6ykgVD7EQ0a" target="_blank" class="btn-buy">Buy now</a>
         </div>
         <div class="course-hero-image">
             <img src="images/box.png" alt="Practical Psychology And Your Everyday Life Digital Course">
@@ -912,7 +912,7 @@
                 <p class="bottom-pricing-price">&pound;199</p>
                 <h2 class="bottom-pricing-title">Practical Psychology And Your Everyday Life</h2>
                 <p class="bottom-pricing-lessons">49 Lessons</p>
-                <a href="#" class="btn-buy">Buy now</a>
+                <a href="https://buy.stripe.com/6oU00k9T27tC6ykgVD7EQ0a" target="_blank" class="btn-buy">Buy now</a>
             </div>
             <div class="bottom-pricing-image">
                 <img src="images/box.png" alt="Practical Psychology And Your Everyday Life Digital Course">
@@ -947,13 +947,9 @@
         function toggleVideo(element) {
             const videoItem = element.parentElement;
             const isActive = videoItem.classList.contains('active');
-
-            // Close all other items
             document.querySelectorAll('.video-item').forEach(item => {
                 item.classList.remove('active');
             });
-
-            // Toggle the clicked item
             if (!isActive) {
                 videoItem.classList.add('active');
             }
