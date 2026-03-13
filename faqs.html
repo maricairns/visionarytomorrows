@@ -275,19 +275,6 @@
             height: 18px;
         }
 
-        /* ============ COFFEE CUPS SECTION ============ */
-        .coffee-section {
-            background-color: #f7f7f7;
-            text-align: center;
-            padding: 0 20px 0;
-        }
-
-        .coffee-section img {
-            max-width: 380px;
-            width: 100%;
-            height: auto;
-        }
-
         /* ============ FOOTER ============ */
         .site-footer {
             background-color: #c0c0c0;
@@ -414,10 +401,6 @@
             .cta-section img {
                 max-width: 280px;
             }
-
-            .coffee-section img {
-                max-width: 150px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -457,7 +440,7 @@
             <a href="companies.html">Companies</a>
             <a href="course-content.html">Course Content</a>
             <a href="faqs.html">FAQs</a>
-            <a href="#" class="btn-login">Login</a>
+            <a href="course-player.html" class="btn-login">Login</a>
         </nav>
     </header>
 
@@ -530,7 +513,7 @@
     <section class="cta-section">
         <img src="images/nameplaque.png" alt="Dr Mari Cairns — DClinPsych (Oxford) CPsychol AFBPsS MBA">
         <div class="cta-buttons">
-            <a href="#" class="btn-cta btn-cta-green">Get instant access</a>
+            <a href="https://buy.stripe.com/6oU00k9T27tC6ykgVD7EQ0a" target="_blank" class="btn-cta btn-cta-green">Get instant access</a>
             <a href="course-content.html" class="btn-cta btn-cta-green">Course Content</a>
         </div>
     </section>
@@ -603,13 +586,9 @@
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             const isActive = faqItem.classList.contains('active');
-            
-            // Close all other items
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
-            // Toggle the clicked item
             if (!isActive) {
                 faqItem.classList.add('active');
             }
