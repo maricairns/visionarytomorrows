@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmed — Visionary Tomorrows</title>
+    <link rel="icon" type="image/png" href="images/Banner_Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; font-size: 22px; line-height: 1.8; color: #000000; background-color: #f7f7f7; }
+        a { color: #2aad69; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .site-header { background-color: #ffffff; padding: 15px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .header-logo img { height: 65px; }
+        .header-nav { display: flex; align-items: center; gap: 40px; }
+        .header-nav a { color: #000000; font-size: 18px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+        .header-nav a:hover { color: #2aad69; }
+        .btn-login { background-color: #2aad69; color: #ffffff !important; padding: 13px 35px; border-radius: 6px; font-weight: 600; font-size: 18px; transition: background-color 0.2s; }
+        .btn-login:hover { background-color: #239b5b; text-decoration: none !important; }
+
+        .success-page { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 60px 40px; }
+        .success-card { background: #ffffff; border-radius: 16px; box-shadow: 0 4px 40px rgba(0,0,0,0.1); padding: 70px 80px; max-width: 680px; width: 100%; text-align: center; }
+        .success-icon { width: 90px; height: 90px; background-color: #e8f7f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; }
+        .success-icon i { font-size: 42px; color: #2aad69; }
+        .success-card h1 { font-size: 34px; font-weight: 800; color: #000000; margin-bottom: 16px; line-height: 1.2; }
+        .success-card .subtitle { font-size: 18px; color: #555555; margin-bottom: 40px; line-height: 1.6; }
+
+        .access-code-box { background: #f7f7f7; border: 2px solid #2aad69; border-radius: 12px; padding: 32px 40px; margin-bottom: 40px; }
+        .access-code-box .code-label { font-size: 14px; font-weight: 700; color: #2aad69; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .access-code-box .code-value { font-size: 42px; font-weight: 800; color: #000000; letter-spacing: 6px; margin-bottom: 10px; }
+        .access-code-box .code-note { font-size: 15px; color: #555555; line-height: 1.5; }
+
+        .copy-btn { background: transparent; border: 2px solid #2aad69; color: #2aad69; padding: 10px 24px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; }
+        .copy-btn:hover { background: #2aad69; color: #ffffff; }
+        .copy-btn.copied { background: #2aad69; color: #ffffff; }
+
+        .btn-enter-course { display: inline-block; background-color: #2aad69; color: #ffffff; padding: 18px 50px; border-radius: 6px; font-size: 20px; font-weight: 700; text-decoration: none; transition: background-color 0.2s; margin-bottom: 24px; }
+        .btn-enter-course:hover { background-color: #239b5b; text-decoration: none; color: #ffffff; }
+
+        .success-note { font-size: 15px; color: #888888; line-height: 1.6; }
+        .success-note strong { color: #555555; }
+
+        .site-footer { background-color: #c0c0c0; background-image: url('images/Background_light.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; text-align: center; padding: 50px 30px 45px; width: 100%; }
+        .footer-copyright { font-size: 20px; color: #333333; margin-bottom: 8px; }
+        .footer-made-with { font-size: 20px; color: #333333; margin-bottom: 18px; }
+        .footer-vision, .footer-mission { font-size: 22px; font-weight: 700; color: #000000; margin-bottom: 6px; }
+        .footer-mission { margin-bottom: 25px; }
+        .footer-nav { margin-bottom: 20px; }
+        .footer-nav a { color: #333333; font-size: 18px; font-weight: 500; margin: 0 12px; text-decoration: none; }
+        .footer-nav a:hover { color: #2aad69; }
+        .footer-social { margin-bottom: 22px; }
+        .footer-social a { color: #000000; font-size: 30px; margin: 0 16px; text-decoration: none; transition: color 0.2s; }
+        .footer-social a:hover { color: #2aad69; }
+        .footer-legal a { color: #666666; font-size: 18px; margin: 0 14px; text-decoration: none; }
+        .footer-legal a:hover { color: #2aad69; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-logo"><a href="index.html"><img src="images/Banner_Logo.png" alt="Visionary Tomorrows"></a></div>
+    <nav class="header-nav">
+        <a href="companies.html">Companies</a>
+        <a href="course-content.html">Course Content</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="course-player.html" class="btn-login">My Course</a>
+    </nav>
+</header>
+
+<section class="success-page">
+    <div class="success-card">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <h1>You're in — welcome to the course!</h1>
+        <p class="subtitle">Your payment was successful. Here is your personal access code to enter the course. Please save it somewhere safe.</p>
+
+        <div class="access-code-box">
+            <p class="code-label">Your Access Code</p>
+            <p class="code-value" id="code-display">VT2026</p>
+            <p class="code-note">You'll need this each time you log in on a new device.</p>
+            <button class="copy-btn" id="copy-btn" onclick="copyCode()">
+                <i class="fas fa-copy"></i> Copy code
+            </button>
+        </div>
+
+        <a href="course-player.html" class="btn-enter-course">Enter My Course <i class="fas fa-arrow-right"></i></a>
+
+        <p class="success-note">
+            <strong>Keep this code safe.</strong> A receipt has been sent to your email by Stripe. If you have any questions, contact us at <a href="mailto:mari.cairns@gmail.com">mari.cairns@gmail.com</a>.
+        </p>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p class="footer-copyright">&copy; 2026 Visionary Tomorrows. All Rights Reserved</p>
+    <p class="footer-made-with">Made with ☕ and ❤️</p>
+    <p class="footer-vision"><strong>the vision, a world where mental health is prioritised</strong></p>
+    <p class="footer-mission"><strong>the mission, tomorrow starts with your wellbeing today</strong></p>
+    <nav class="footer-nav">
+        <a href="companies.html">Companies</a>
+        <a href="course-content.html">Course Content</a>
+        <a href="faqs.html">FAQs</a>
+    </nav>
+    <div class="footer-social">
+        <a href="https://www.linkedin.com/in/maricairns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://maricairns.github.io/visionarytomorrows" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+        <a href="mailto:mari.cairns@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+</footer>
+
+<script>
+    function copyCode() {
+        const code = document.getElementById('code-display').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            const btn = document.getElementById('copy-btn');
+            btn.classList.add('copied');
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<i class="fas fa-copy"></i> Copy code';
+            }, 2500);
+        });
+    }
+</script>
+
+</body>
+</html>
